@@ -1,7 +1,7 @@
 unframework.js
 ==============
 
-unframework.js is my non-massive framework, currently 2.9k. All except background.js require jquery.
+unframework.js is my non-massive framework, currently 2900 bytes. All except background.js require jquery.
 
 Installation
 ============
