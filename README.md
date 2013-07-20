@@ -3,6 +3,16 @@ unframework.js
 
 unframework.js is my non-massive framework, currently 2.9k. All except background.js require jquery.
 
+Installation
+============
+
+Add to your code:
+
+    <script src="https://raw.github.com/jamiesonbecker/unframework.js/master/unframework.js"></script>
+
+
+Included Plugins
+================
 
 [background.js](https://github.com/jamiesonbecker/background.js)
 
