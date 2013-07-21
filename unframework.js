@@ -12,7 +12,7 @@ $.fn.formscrape = function(data){var form = this;
 $("[type=checkbox], [type=radio]", this).each(function(){var name = $(this).attr("name");delete data[name]});
 $.each($(form).serializeArray(), function(i, field){data[field.name] = field.value});
 $("[type=checkbox]". this).each(function(){var name = $(this).attr("name");data[name] = name in data}); return form}
-$.fn.fillup = function(src){return $(this).empty().html($("<div/>").addClass(src.slice(1)).html($(src + "-offstage").children().clone(false)))}
+$.fn.fillup = function(src){return $(this).empty().html($("<div/>").addClass(src.slice(1)).html($("." + src + "-offstage").children().clone(false)))}
 var background = {};
 (run_background_tasks = function(){
 for (var taskname in background){background[taskname]()}
