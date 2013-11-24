@@ -16,15 +16,18 @@ Included Plugins
 
 [background.js](https://github.com/jamiesonbecker/background.js)
 
-Add a method to have it run every 1/4 second:
+Add a method to have it run every 1/4 second. Make sure it doesn't block! See source README above for more docs.
 
-    background.runseveryquarter = function(){console.log("logging")}
+    background.sillylogger = function(){
+        // fill up your log console fast!
+        console.log("logging")
+    }
 
 
 
 [formscrape.js](https://github.com/jamiesonbecker/formscrape.js)
 
-Given a form that has data in it, extract all the data into a JSON dictionary:
+Extract all form fields in a form into a JSON dictionary, see source README above for more docs:
 
     var formdata = {};
     $("form").formscrape(formdata);
@@ -33,7 +36,7 @@ Given a form that has data in it, extract all the data into a JSON dictionary:
 
 [formplode.js](https://github.com/jamiesonbecker/formplode.js)
 
-Given a JSON dictionary formdata and an empty form, fill in the input fields (opposite of formscrape):
+The reverse of formscrape: if you have a JSON dictionary called 'formdata' and an empty form, instantly fill in the input fields:
 
     $("form").formplode(formdata)
 
@@ -41,7 +44,7 @@ Given a JSON dictionary formdata and an empty form, fill in the input fields (op
 
 [fillup.js](https://github.com/jamiesonbecker/fillup.js)
 
-Super-simple HTML templating engine:
+Here's a super-simple HTML templating engine that works by copying in a chunk of HTML that's not displayed onto the page where you can modify it without changing the original:
 
     <div class="contactform1"><div>
     <div style="display:none">
@@ -56,7 +59,7 @@ Super-simple HTML templating engine:
 
 [safify.js](https://github.com/jamiesonbecker/safify.js)
 
-Contains both strict and unstrict HTML safifying according to OWASP standards. You should always safify data fields like message board comments, profile descriptions, posts, signatures, etc before putting it on screen to prevent XSS. Unstrict safify allows certain bare safe HTML such as `<b>` and `<h1>` so your visitors can still use some HTML in their comments. *All data fields that a visitor can edit should be safified.*
+Safify can be run against some text data such as a comment and removes potentially unsafe (XSS) tags. There are both strict and unstrict (leaves some 'safe' tags in, such as <b>) HTML safifying methods and they are written according to the OWASP standards. You should always safify data fields like message board comments, profile descriptions, posts, signatures, etc before putting it on screen to prevent XSS. Unstrict safify allows certain bare safe HTML such as `<b>` and `<h1>` so your visitors can still use some HTML in their comments. *All data fields that a visitor can edit should be safified.*
 
     $("p").html($(comment).safify);
 
