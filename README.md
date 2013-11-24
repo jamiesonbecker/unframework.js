@@ -59,7 +59,7 @@ Here's a super-simple HTML templating engine that works by copying in a chunk of
 
 [safify.js](https://github.com/jamiesonbecker/safify.js)
 
-Safify can be run against some text data such as a comment and removes potentially unsafe (XSS) tags. There are both strict and unstrict (leaves some 'safe' tags in, such as <b>) HTML safifying methods and they are written according to the OWASP standards. You should always safify data fields like message board comments, profile descriptions, posts, signatures, etc before putting it on screen to prevent XSS. Unstrict safify allows certain bare safe HTML such as `<b>` and `<h1>` so your visitors can still use some HTML in their comments. *All data fields that a visitor can edit should be safified.*
+Safify can be run against some text data such as a comment and removes potentially unsafe (XSS) tags. There are both strict and unstrict (leaves some 'safe' tags in, such as &lt;b&gt;) HTML safifying methods and they are written according to the OWASP standards. You should always safify data fields like message board comments, profile descriptions, posts, signatures, etc before putting it on screen to prevent XSS. Unstrict safify allows certain bare safe HTML such as `<b>` and `<h1>` so your visitors can still use some HTML in their comments. *All data fields that a visitor can edit should be safified.*
 
     $("p").html($(comment).safify);
 
